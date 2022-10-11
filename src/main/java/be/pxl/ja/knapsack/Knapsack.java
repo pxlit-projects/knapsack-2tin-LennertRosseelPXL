@@ -1,11 +1,11 @@
-package be.pxl.ja.robbery;
+package be.pxl.ja.knapsack;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Knapsack {
+public class Knapsack<I extends Item> {
     private double maximumCapacity;
-    private List<Product> items = new ArrayList<Product>();
+    private List<I> items = new ArrayList<>();
 
     public Knapsack(double maximumCapacity) {
         this.maximumCapacity = maximumCapacity;
@@ -14,22 +14,22 @@ public class Knapsack {
     public double getCurrentWeight() {
         double currentWeight = 0;
 
-        for (Product item: items) {
+        for (I item: items) {
             currentWeight += item.getWeight();
         }
 
         return currentWeight;
     }
 
-    public void add(Product item) throws KnapsackFullException {
+    public void add(I item) throws KnapsackFullException {
         if (getCurrentWeight() + item.getWeight() > maximumCapacity) {
-            throw new KnapsackFullException("Het toevoegen van " + item.getName() + " overschrijdt het maximumgewicht van " + maximumCapacity + "kg.");
+            throw new KnapsackFullException("Het toevoegen van " + item + " overschrijdt het maximumgewicht van " + maximumCapacity + "kg.");
         }
 
         items.add(item);
     }
 
-    public List<Product> getItems() {
+    public List<I> getItems() {
         return items;
     }
 }

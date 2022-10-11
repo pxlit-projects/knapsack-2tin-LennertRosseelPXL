@@ -1,8 +1,8 @@
 package be.pxl.ja.citytrip;
 
-import be.pxl.ja.robbery.Product;
+import be.pxl.ja.knapsack.Item;
 
-public class Attraction implements Comparable<Attraction>{
+public class Attraction implements Item, Comparable<Attraction>{
     private int rating;
     private double days;
     private String name;

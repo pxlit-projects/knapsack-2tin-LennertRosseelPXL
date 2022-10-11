@@ -1,6 +1,6 @@
-package be.pxl.ja.citytrip;
+package be.pxl.ja.knapsack;
 
-public class KnapsackFullException extends Throwable {
+public class KnapsackFullException extends Exception {
     public KnapsackFullException(String message) {
         super(message);
     }

@@ -1,8 +1,11 @@
 package be.pxl.ja.citytrip;
 
+import be.pxl.ja.knapsack.Knapsack;
+import be.pxl.ja.knapsack.KnapsackUtil;
+
 public class VisitLondon {
     public static void main(String[] args) {
-        Knapsack knapsack = new Knapsack(2);
+        Knapsack<Attraction> knapsack = new Knapsack(2);
         LondonAttractions attractions = new LondonAttractions();
 
         attractions.add(new Attraction("Westminster Abbey", 0.5, 7));

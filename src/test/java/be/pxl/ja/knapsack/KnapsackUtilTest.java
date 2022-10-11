@@ -1,5 +1,10 @@
-package be.pxl.ja.robbery;
+package be.pxl.ja.knapsack;
 
+import be.pxl.ja.knapsack.Knapsack;
+import be.pxl.ja.knapsack.KnapsackFullException;
+import be.pxl.ja.knapsack.KnapsackUtil;
+import be.pxl.ja.robbery.Product;
+import be.pxl.ja.robbery.Shop;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -17,7 +22,7 @@ public class KnapsackUtilTest {
         shop.add(product);
         shop.add(product1);
         shop.add(product2);
-        Knapsack knapsack = new Knapsack(20);
+        Knapsack<Product> knapsack = new Knapsack(20);
 
         List<Product> items = new ArrayList<Product>();
         items.add(product2);

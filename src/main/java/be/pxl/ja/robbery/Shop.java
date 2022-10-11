@@ -1,9 +1,11 @@
 package be.pxl.ja.robbery;
 
+import be.pxl.ja.knapsack.Inventory;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Shop {
+public class Shop extends Inventory<Product> {
 
     List<Product> items = new ArrayList<>();
 
